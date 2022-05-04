@@ -15,3 +15,11 @@ websession是最后的药物知识图谱，采用的是指代消解流程。
 spacy版本2.3.7（之前位3.1.2但是由于要进行指代消解，降级为了指代消解拓展程序所需的spcay 2版本，训练集为英文的对应版本）
 neuralcoref版本4.00（安装较为繁琐，需配置c++环境库）
 nltk pip最新版本（训练集是通过科学上网获取的，但是应该也可以通过修改镜像或者离线安装的方法下载）
+
+参考资料：
+1.https://blog.csdn.net/qq_36426650/article/details/110390887
+2.夏老师课程代码
+3.https://www.nltk.org/
+4.https://spacy.io/
+5.https://jsonlines.readthedocs.io/en/latest/
+6.https://www.ncbi.nlm.nih.gov/research/pubtator/
