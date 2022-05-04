@@ -340,13 +340,37 @@ def extract_triples(text):
 
     # TRIPLES = rank_by_degree(filtered_triples)
     return filtered_triples
+def filiter(triples):#过滤器，筛选出含有关键词drought和gene的三元组
+    keywords=['pharmaceuticals','medicines','donepezil','rivastigmine','memantine']
+    m=0
+    filitedlist=[]
+    for i in triples:
+        temp=i[0].split(" ")
+        for j in temp:
+            if j in keywords:
+                m = m + 1
+                print(i)
+                filitedlist.append(i)
+    print(m)
+    return filitedlist
+
+def write_to_sif(output_file,list):#导出sif文件，用于cytoscape绘制三元组关系网络
+    for i in list:
+        s=i[0]
+        r=i[1]
+        o=i[2]
+        output_file.write(s+'\t'+r+'\t'+o+'\n')
+    output_file.close()
 
 def process_all():
-    text = open("D:/NLP/temp_core.txt", 'r').read()
-
+    text = open("D:/NLP/keysentence_contain_chemical_gene_core.txt", 'r').read()
+    outfile = open("C:/Users/pillar/Desktop/graph.sif" , "a")
     triples = extract_triples(text)
-    print("\n\n===============the result=============\n\n")
+     print("\n\n===============the result=============\n\n")
     print(triples)
+    print("\n\n===============the filite result=============\n\n")
+    filitedlist = filiter(triples)
+    write_to_sif(outfile, filitedlist)
 
 if __name__ == "__main__":
     process_all()
