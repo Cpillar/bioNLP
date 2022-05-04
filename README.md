@@ -17,8 +17,8 @@ neuralcoref版本4.00（安装较为繁琐，需配置c++环境库）
 nltk pip最新版本（训练集是通过科学上网获取的，但是应该也可以通过修改镜像或者离线安装的方法下载）
 
 参考资料：
-1.https://blog.csdn.net/qq_36426650/article/details/110390887
-2.夏老师课程代码
+1.夏老师讲义和课程代码
+2.https://blog.csdn.net/qq_36426650/article/details/110390887
 3.https://www.nltk.org/
 4.https://spacy.io/
 5.https://jsonlines.readthedocs.io/en/latest/
