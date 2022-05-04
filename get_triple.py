@@ -345,12 +345,17 @@ def filiter(triples):#过滤器，筛选出含有关键词drought和gene的三�
     m=0
     filitedlist=[]
     for i in triples:
-        temp=i[0].split(" ")
-        for j in temp:
+        temp=i[0]
+        temp1=i[2]
+        obsub=temp+" "+temp1
+        for j in obsub.split(" "):
             if j in keywords:
-                m = m + 1
+                m=m+1
                 print(i)
                 filitedlist.append(i)
+                continue
+
+
     print(m)
     return filitedlist
 
