@@ -1,4 +1,4 @@
-edit by peilin xie
+edit by Peilin Xie
 For bionlp
 
 不含指代消解的nlp分析的流程：
